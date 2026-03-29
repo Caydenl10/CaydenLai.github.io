@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume — [YOUR NAME], Georgia Tech ECE Student">
+  <title>Resume | [YOUR NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-bracket">[</span>[INITIALS]<span class="logo-bracket">]</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Resume</p>
+        <h1>Resume</h1>
+        <p class="subtitle">B.S. Electrical and Computer Engineering &mdash; Georgia Institute of Technology</p>
+        <div class="resume-download-bar">
+          <!-- Upload resume.pdf to the root of your repo for this link to work -->
+          <a href="resume.pdf" download class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME BODY -->
+    <section class="section" aria-label="Resume content">
+      <div class="container">
+
+        <div class="resume-paper reveal">
+
+          <!-- ====== RESUME HEADER ====== -->
+          <div class="resume-header-block">
+            <h1>[YOUR FULL NAME]</h1>
+            <div class="resume-contact-line">
+              <span>[student@gatech.edu]</span>
+              <span>[XXX-XXX-XXXX]</span>
+              <span>[City, State]</span>
+              <a href="https://linkedin.com/in/[LINKEDIN-HANDLE]" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/[GITHUB-USERNAME]" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+
+          <!-- ====== EDUCATION ====== -->
+          <div class="resume-section" id="education">
+            <h2 class="resume-section-title">Education</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">Georgia Institute of Technology</div>
+                  <div class="resume-entry-org">Bachelor of Science, Electrical and Computer Engineering</div>
+                  <div class="resume-entry-org" style="margin-top:0.2rem; font-size:0.85rem;">
+                    Concentration / Thread: [YOUR CONCENTRATION, e.g., Embedded Computing &amp; Systems]
+                  </div>
+                </div>
+                <div class="resume-entry-date">Atlanta, GA &nbsp;|&nbsp; Expected [MONTH YEAR]</div>
+              </div>
+              <ul>
+                <li>GPA: [X.XX / 4.0] &nbsp;|&nbsp; Dean's List: [SEMESTERS]</li>
+                <li>
+                  <strong>Relevant Coursework:</strong> ECE 2020 (Digital System Design), ECE 2040 (Circuit Analysis),
+                  CS 1371 (Computing for Engineers), ECE 3025 (Electromagnetics),
+                  [COURSE 4], [COURSE 5], [COURSE 6]
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- ====== TECHNICAL SKILLS ====== -->
+          <div class="resume-section" id="skills">
+            <h2 class="resume-section-title">Technical Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-row">
+                <span class="skill-label">Languages:</span>
+                <span class="skill-value">Python, C/C++, MATLAB, [LANGUAGE 4], [LANGUAGE 5]</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-label">Hardware:</span>
+                <span class="skill-value">Arduino, Raspberry Pi, Oscilloscope, Function Generator, [TOOL]</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-label">Software:</span>
+                <span class="skill-value">Git / GitHub, VS Code, LTSpice, Multisim, [SOFTWARE]</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-label">Concepts:</span>
+                <span class="skill-value">Digital Logic, Signal Processing, Embedded Systems, [CONCEPT]</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-label">Soft Skills:</span>
+                <span class="skill-value">Technical Writing, Team Leadership, Cross-functional Collaboration</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-label">Other:</span>
+                <span class="skill-value">[ANY ADDITIONAL SKILLS, e.g., PCB layout (KiCad), Linux CLI, Verilog]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====== EXPERIENCE ====== -->
+          <div class="resume-section" id="experience">
+            <h2 class="resume-section-title">Experience</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[JOB TITLE]</div>
+                  <div class="resume-entry-org">[COMPANY NAME] &mdash; [City, State / Remote]</div>
+                </div>
+                <div class="resume-entry-date">[START MONTH YEAR] &ndash; [END MONTH YEAR]</div>
+              </div>
+              <ul>
+                <!-- Each bullet should start with a strong action verb and include a metric where possible -->
+                <li>
+                  [ACTION VERB, e.g., Developed] a [TOOL/SCRIPT/SYSTEM] using [TECHNOLOGY] that [ACHIEVED RESULT, e.g., automated data pipeline processing, reducing manual effort by 40%]
+                </li>
+                <li>
+                  [ACTION VERB, e.g., Collaborated] with a team of [X] engineers to [TASK/GOAL], delivering [OUTCOME] on schedule
+                </li>
+                <li>
+                  [ACTION VERB, e.g., Designed] and [TESTED/VALIDATED] [COMPONENT/SYSTEM] using [TOOLS], resulting in [IMPROVEMENT]
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[JOB TITLE / RESEARCH ROLE]</div>
+                  <div class="resume-entry-org">[COMPANY / RESEARCH LAB] &mdash; [Location]</div>
+                </div>
+                <div class="resume-entry-date">[START MONTH YEAR] &ndash; [END MONTH YEAR]</div>
+              </div>
+              <ul>
+                <li>
+                  [ACTION VERB] [TASK DESCRIPTION] using [TECHNOLOGY/TOOLS], [RESULT or LEARNING]
+                </li>
+                <li>
+                  [ACTION VERB] [TASK DESCRIPTION] which [IMPACT or CONTRIBUTION]
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- ====== PROJECTS ====== -->
+          <div class="resume-section" id="projects">
+            <h2 class="resume-section-title">Projects</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">Discovery Project: [PROJECT TITLE]</div>
+                  <div class="resume-entry-org">Technologies: [TECH 1], [TECH 2], [TECH 3]</div>
+                </div>
+                <div class="resume-entry-date">[SEMESTER / YEAR]</div>
+              </div>
+              <ul>
+                <li>
+                  Designed and built [BRIEF SYSTEM DESCRIPTION] achieving [MEASURABLE RESULT OR CAPABILITY].
+                  See <a href="projects.html" style="color:var(--navy); text-decoration:underline;">Projects page</a> for full write-up.
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[PROJECT 2 NAME]</div>
+                  <div class="resume-entry-org">Technologies: [TECH 1], [TECH 2]</div>
+                </div>
+                <div class="resume-entry-date">[SEMESTER / YEAR]</div>
+              </div>
+              <ul>
+                <li>
+                  [One sentence describing the project goal, approach, and outcome.]
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[PROJECT 3 NAME]</div>
+                  <div class="resume-entry-org">Technologies: [TECH 1], [TECH 2]</div>
+                </div>
+                <div class="resume-entry-date">[SEMESTER / YEAR]</div>
+              </div>
+              <ul>
+                <li>
+                  [One sentence describing the project goal, approach, and outcome.]
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- ====== LEADERSHIP & ACTIVITIES ====== -->
+          <div class="resume-section" id="leadership">
+            <h2 class="resume-section-title">Leadership &amp; Activities</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[ROLE, e.g., Technical Lead]</div>
+                  <div class="resume-entry-org">[ORGANIZATION, e.g., GT IEEE Student Branch]</div>
+                </div>
+                <div class="resume-entry-date">[DATES]</div>
+              </div>
+              <ul>
+                <li>[Brief description of your role and accomplishments in the organization.]</li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <div class="resume-entry-title">[ROLE, e.g., Member / Volunteer]</div>
+                  <div class="resume-entry-org">[ORGANIZATION / CLUB]</div>
+                </div>
+                <div class="resume-entry-date">[DATES]</div>
+              </div>
+              <ul>
+                <li>[Brief note about involvement, event organized, or skill developed.]</li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div>
+                <div class="resume-entry-title">[HONOR SOCIETY / AWARD / SCHOLARSHIP]</div>
+                <div class="resume-entry-org">[Issuing organization], [YEAR]</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div><!-- end .resume-paper -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile sticky download button (visible only on small screens) -->
+  <div class="resume-sticky-download">
+    <a href="resume.pdf" download class="btn-primary" aria-label="Download resume PDF">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      PDF
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span style="color:var(--gold)">[</span>[INITIALS]<span style="color:var(--gold)">]</span>
+          </a>
+          <p class="footer-tagline">ECE Student at Georgia Tech, passionate about building technology that matters.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com/in/[LINKEDIN-HANDLE]" aria-label="LinkedIn Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/[GITHUB-USERNAME]" aria-label="GitHub Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://instagram.com/[INSTAGRAM-HANDLE]" aria-label="Instagram Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> [YOUR FULL NAME]. Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

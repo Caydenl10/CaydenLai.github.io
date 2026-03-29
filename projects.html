@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects — [YOUR NAME], Georgia Tech ECE Student">
+  <title>Projects | [YOUR NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-bracket">[</span>[INITIALS]<span class="logo-bracket">]</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Projects</p>
+        <h1>Projects</h1>
+        <p class="subtitle">Engineering design work, research, and personal builds</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FEATURED — DISCOVERY PROJECT
+    ===================================================== -->
+    <section class="discovery-section" aria-labelledby="discovery-heading">
+      <div class="container">
+
+        <div class="discovery-label text-center mb-4">
+          <span class="eyebrow">Course / Capstone Project</span>
+          <h2 class="section-title centered" id="discovery-heading">Discovery Project</h2>
+        </div>
+
+        <!-- FEATURED HORIZONTAL CARD -->
+        <article class="card-featured reveal" aria-label="Featured project">
+
+          <!-- Replace src with your actual project image -->
+          <img
+            src="https://placehold.co/560x420/1a2744/c9a84c?text=Discovery+Project"
+            alt="[PROJECT TITLE] — project image"
+            class="card-featured-img"
+            width="560"
+            height="420"
+            loading="lazy"
+          >
+
+          <div class="card-body">
+            <span class="eyebrow">Featured Project</span>
+
+            <!-- Replace with your actual project title -->
+            <h2 id="discovery-project-title" style="margin-bottom:0.25rem;">[PROJECT TITLE]</h2>
+            <p style="font-size:0.85rem; color:var(--gray-400); margin-bottom:0.75rem;">
+              [COURSE NUMBER, e.g., ECE 4180] &nbsp;&bull;&nbsp; [SEMESTER / YEAR]
+            </p>
+
+            <div class="tags">
+              <!-- Replace with your actual technologies used -->
+              <span class="tag">[TECHNOLOGY 1]</span>
+              <span class="tag">[TECHNOLOGY 2]</span>
+              <span class="tag">[TECHNOLOGY 3]</span>
+              <span class="tag">[TECHNOLOGY 4]</span>
+              <span class="tag">[TECHNOLOGY 5]</span>
+            </div>
+
+            <div class="project-body">
+
+              <!-- ===== REPLACE ALL PLACEHOLDER TEXT BELOW WITH YOUR PROJECT DESCRIPTION ===== -->
+              <!-- Minimum 500 words. Use these four subheadings as a structure guide. -->
+
+              <p class="project-subheading">Project Overview</p>
+              <p>
+                This project emerged from [COURSE NAME, e.g., ECE 4180: Embedded Systems Design] as an opportunity to apply concepts from [TOPIC AREA, e.g., real-time embedded programming and hardware-software co-design] in a tangible, real-world system. The goal was to design and build [DESCRIBE THE SYSTEM, e.g., an autonomous obstacle-avoidance robot] capable of [PRIMARY FUNCTION, e.g., navigating an unknown indoor environment without human intervention]. Working [solo / in a team of [X] students], I was responsible for [YOUR SPECIFIC ROLE, e.g., firmware development, sensor integration, and system integration testing].
+              </p>
+              <p>
+                The motivation behind this project was [WHY THIS PROBLEM, e.g., to explore how low-cost microcontrollers can be used to implement closed-loop control systems that rival more expensive commercial solutions]. I was drawn to this challenge because it sits at the intersection of [SUBFIELD 1] and [SUBFIELD 2] — two areas I'm deeply interested in. By the end of the project, I wanted to demonstrate not just that the system worked, but that I understood why every design decision was made.
+              </p>
+
+              <p class="project-subheading">Technical Approach</p>
+              <p>
+                The system architecture was divided into three primary subsystems. [SUBSYSTEM 1, e.g., The sensing subsystem] handled [FUNCTION, e.g., distance measurement using an array of HC-SR04 ultrasonic sensors mounted at the front, left, and right of the chassis]. [SUBSYSTEM 2, e.g., The control subsystem] was responsible for [FUNCTION, e.g., processing sensor readings and executing a reactive navigation algorithm that determined motor direction and speed in real time]. [SUBSYSTEM 3, e.g., The drive subsystem] managed [FUNCTION, e.g., PWM signals sent to two DC motors through an L298N motor driver, allowing differential steering].
+              </p>
+              <p>
+                The core processing was performed by [MICROCONTROLLER, e.g., an Arduino Mega 2560], chosen because [REASON, e.g., its generous number of GPIO pins, robust interrupt handling, and the availability of well-maintained libraries for our sensors]. I implemented [ALGORITHM OR TECHNIQUE, e.g., a finite state machine (FSM)] to solve the challenge of [SPECIFIC PROBLEM, e.g., deciding when to turn versus reverse when encountering obstacles at tight angles]. The FSM had [NUMBER] states: [STATE 1, e.g., FORWARD], [STATE 2, e.g., SCAN], [STATE 3, e.g., TURN LEFT], [STATE 4, e.g., TURN RIGHT], and [STATE 5, e.g., REVERSE]. Transitions between states were triggered by [CONDITIONS, e.g., proximity thresholds measured in centimeters].
+              </p>
+              <p>
+                The firmware was written in [LANGUAGE, e.g., C++ using the Arduino framework] and structured to separate hardware abstraction from control logic. This separation made it much easier to [BENEFIT, e.g., test each sensor in isolation before integrating the full system]. I also wrote [TOOL OR UTILITY, e.g., a Python serial monitor script] to [PURPOSE, e.g., log sensor data to a CSV file during testing], which was invaluable for debugging state transition timing.
+              </p>
+
+              <p class="project-subheading">Challenges &amp; Solutions</p>
+              <p>
+                The most significant challenge I encountered was [CHALLENGE, e.g., sensor crosstalk — when multiple ultrasonic sensors fired simultaneously, their pulses interfered with each other, causing erroneous distance readings]. Initial attempts using [APPROACH 1, e.g., a simple polling loop that triggered all sensors in rapid succession] resulted in [PROBLEM, e.g., phantom obstacle detections that caused the robot to stop in open space]. After researching [RESOURCE, e.g., the HC-SR04 datasheet and community forums], I discovered that the sensors required a minimum recovery time of [TIME, e.g., 60ms] between firings when placed in close proximity.
+              </p>
+              <p>
+                I resolved this by [SOLUTION, e.g., implementing a staggered interrupt-driven firing sequence with a 75ms guard interval between each sensor, triggered by a hardware timer rather than a software delay]. This not only eliminated the crosstalk but also [ADDITIONAL BENEFIT, e.g., freed the main loop from blocking, making the control response more responsive overall]. A secondary challenge was [CHALLENGE 2, e.g., battery voltage sag under motor load causing the microcontroller to reset mid-operation]. I addressed this by [SOLUTION 2, e.g., adding bulk capacitors across the power rail and using a dedicated 5V regulator for the logic circuitry]. These two fixes transformed the system from unreliable to consistently functional — a lesson in the importance of thorough hardware debugging.
+              </p>
+
+              <p class="project-subheading">Results &amp; Reflection</p>
+              <p>
+                The final system achieved [MEASURABLE OUTCOME, e.g., a 94% navigation success rate across 20 test runs in a standardized obstacle course, with an average traversal time of 47 seconds]. In testing, [RESULT 1, e.g., the robot successfully avoided all static obstacles and adapted to three out of four moving obstacle scenarios]. The system fell short of [LIMITATION, e.g., handling simultaneous obstacles on both sides due to the limited sensor field of view], which I identified as the primary area for improvement.
+              </p>
+              <p>
+                If I were to continue development, I would [NEXT STEP 1, e.g., replace the ultrasonic sensors with a LIDAR module to gain 360-degree environmental awareness] and [NEXT STEP 2, e.g., migrate the control logic to an RTOS environment to ensure deterministic timing under all load conditions]. This project fundamentally changed how I approach [ENGINEERING DOMAIN, e.g., embedded systems design] problems — particularly around the importance of hardware/software co-design, systematic debugging, and writing firmware that is testable in isolation before integration. It reinforced my interest in pursuing [SUBFIELD, e.g., embedded systems and real-time computing] at a deeper level in future coursework and my career.
+              </p>
+              <!-- ===== END OF DISCOVERY PROJECT DESCRIPTION ===== -->
+
+            </div>
+
+            <!-- Link to a more detailed write-up or PDF if you have one -->
+            <div class="mt-3">
+              <a href="#" class="btn-outline dark" style="font-size:0.875rem;">
+                View Full Write-Up
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ADDITIONAL PROJECTS GRID
+    ===================================================== -->
+    <section class="projects-section" aria-labelledby="more-projects-heading">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="eyebrow">More Work</span>
+          <h2 class="section-title centered" id="more-projects-heading">Additional Projects</h2>
+        </div>
+
+        <div class="grid-3">
+
+          <!-- PROJECT CARD 2 -->
+          <article class="card reveal" aria-label="Project 2">
+            <img
+              src="https://placehold.co/400x240/c9a84c/1a2744?text=Project+2"
+              alt="[PROJECT 2 NAME] — project image"
+              class="card-img"
+              width="400"
+              height="240"
+              loading="lazy"
+            >
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag">[TECH 1]</span>
+                <span class="tag">[TECH 2]</span>
+                <span class="tag">[TECH 3]</span>
+              </div>
+              <!-- Replace with your actual project title and description -->
+              <h3>[PROJECT 2 NAME]</h3>
+              <p>
+                This project involved designing a [CIRCUIT / PROGRAM / SYSTEM] to [FUNCTION OR GOAL]. Using [TOOLS / LANGUAGES / HARDWARE], I built [DELIVERABLE] which [RESULT OR OUTCOME]. The most interesting aspect was [HIGHLIGHT], which required [SKILL OR TECHNIQUE]. Through this project I deepened my understanding of [CONCEPT] and improved my ability to [SKILL].
+              </p>
+              <a href="#" class="card-link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 3 -->
+          <article class="card reveal" aria-label="Project 3">
+            <img
+              src="https://placehold.co/400x240/1a2744/c9a84c?text=Project+3"
+              alt="[PROJECT 3 NAME] — project image"
+              class="card-img"
+              width="400"
+              height="240"
+              loading="lazy"
+            >
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag">[TECH 1]</span>
+                <span class="tag">[TECH 2]</span>
+              </div>
+              <!-- Replace with your actual project title and description -->
+              <h3>[PROJECT 3 NAME]</h3>
+              <p>
+                [PROJECT 3 NAME] started as a personal curiosity project and grew into a [SCALE] build. I used [TOOLS / FRAMEWORK / LANGUAGE] to [TASK OR BUILD]. The system [HOW IT WORKS AT A HIGH LEVEL]. One of the key technical decisions was [DECISION], which I chose because [REASON]. The result was [OUTCOME], and it remains one of my favorite projects to demonstrate.
+              </p>
+              <a href="#" class="card-link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 4 — In Progress -->
+          <article class="card reveal" aria-label="Project 4 — in progress">
+            <img
+              src="https://placehold.co/400x240/243060/c9a84c?text=Coming+Soon"
+              alt="[PROJECT 4 NAME] — coming soon"
+              class="card-img"
+              width="400"
+              height="240"
+              loading="lazy"
+            >
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag" style="background:var(--gray-100); color:var(--gray-400);">In Progress</span>
+              </div>
+              <!-- Replace with your actual upcoming project title and description -->
+              <h3>[PROJECT 4 NAME — Coming Soon]</h3>
+              <p>
+                This project is currently in development. Expected completion: [SEMESTER / YEAR]. The goal is to [BRIEF DESCRIPTION OF WHAT YOU'RE BUILDING AND WHY]. Stay tuned for the full write-up and demo.
+              </p>
+              <span class="btn-disabled" aria-disabled="true">In Progress</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span style="color:var(--gold)">[</span>[INITIALS]<span style="color:var(--gold)">]</span>
+          </a>
+          <p class="footer-tagline">ECE Student at Georgia Tech, passionate about building technology that matters.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com/in/[LINKEDIN-HANDLE]" aria-label="LinkedIn Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/[GITHUB-USERNAME]" aria-label="GitHub Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://instagram.com/[INSTAGRAM-HANDLE]" aria-label="Instagram Profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> [YOUR FULL NAME]. Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
