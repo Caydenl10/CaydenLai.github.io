@@ -1344,7 +1344,30 @@ textarea {
 }
 
 .project-card-body {
-  padding: 2.5rem 2.75rem;
+  padding: 1.75rem 2rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.project-built-with {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-built-with .project-artifacts-label {
+  margin-bottom: 0;
+}
+
+.project-built-with .tags {
+  margin: 0;
 }
 
 .project-card-meta {
@@ -1631,7 +1654,7 @@ textarea {
 
   /* Project cards */
   .project-card-body {
-    padding: 1.75rem 1.25rem;
+    padding: 1.25rem 1rem;
   }
 
   .project-card-meta {
