@@ -1412,7 +1412,7 @@ textarea {
 
 .project-card-video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 480px;
   border: none;
   display: block;
 }
