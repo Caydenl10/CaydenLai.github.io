@@ -1410,6 +1410,13 @@ textarea {
   object-fit: cover;
 }
 
+.project-card-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
 .project-card-img-caption {
   padding: 0.6rem 1rem;
   font-size: 0.8rem;
