@@ -1322,6 +1322,137 @@ textarea {
 }
 
 /* ============================================================
+   20b. PROJECT CARDS — STACKED LAYOUT
+   ============================================================ */
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.project-card--featured {
+  border-left: 5px solid var(--gold);
+  background: #fffdf5;
+  box-shadow: var(--shadow-md);
+}
+
+.project-card-body {
+  padding: 2.5rem 2.75rem;
+}
+
+.project-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-card-meta .eyebrow {
+  margin-bottom: 0;
+}
+
+.project-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-400);
+  letter-spacing: 0.03em;
+}
+
+.project-card-title {
+  margin-bottom: 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.project-card-img-wrap {
+  margin-top: 2rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+}
+
+.project-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.project-card-img-caption {
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  background: var(--off-white);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.project-artifacts {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.project-artifacts-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-400);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.tag--artifact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.tag--artifact:hover {
+  background: var(--gold);
+  color: var(--navy-dark);
+  transform: translateY(-1px);
+}
+
+.project-card-footer {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-course-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color var(--transition);
+}
+
+.project-course-link:hover {
+  color: var(--gold-dark);
+}
+
+/* ============================================================
    21. SCROLL REVEAL ANIMATIONS
    ============================================================ */
 .reveal {
@@ -1497,6 +1628,16 @@ textarea {
   .form-row {
     grid-template-columns: 1fr;
   }
+
+  /* Project cards */
+  .project-card-body {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .project-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ============================================================
@@ -1522,5 +1663,9 @@ textarea {
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card-body {
+    padding: 1.25rem 1rem;
   }
 }
