@@ -1406,8 +1406,7 @@ textarea {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 520px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .project-card-video {
