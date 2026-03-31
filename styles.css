@@ -786,6 +786,43 @@ small { font-size: 0.85rem; color: var(--gray-400); }
 /* ============================================================
    14. TIMELINE
    ============================================================ */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  margin-top: 2rem;
+}
+
+.timeline-block h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-block p {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.timeline-steps {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-steps li {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* — keep old classes below so nothing else breaks — */
 .timeline {
   position: relative;
   max-width: 860px;
@@ -1664,6 +1701,10 @@ textarea {
   }
 
   /* Timeline */
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
   .timeline::before {
     left: 18px;
   }
