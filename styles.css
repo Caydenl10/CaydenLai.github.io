@@ -1137,7 +1137,7 @@ small { font-size: 0.85rem; color: var(--gray-400); }
 }
 
 .story-img--headshot {
-  object-position: center top;
+  object-position: center center;
 }
 
 .story-img--campus {
