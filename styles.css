@@ -786,6 +786,77 @@ small { font-size: 0.85rem; color: var(--gray-400); }
 /* ============================================================
    14. TIMELINE
    ============================================================ */
+/* Roadmap timeline */
+.roadmap {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 1rem;
+}
+
+.roadmap-step {
+  flex: 1;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap-year {
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.55rem 1rem;
+  text-align: center;
+}
+
+.roadmap-body {
+  padding: 1.2rem 1.1rem;
+  flex: 1;
+}
+
+.roadmap-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-body p {
+  font-size: 0.84rem;
+  color: var(--gray-700);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.roadmap-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--gold);
+  font-size: 1.75rem;
+  padding: 0 0.25rem;
+  margin-top: 2.15rem; /* align with card body, below year bar */
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    flex-direction: column;
+  }
+
+  .roadmap-arrow {
+    transform: rotate(90deg);
+    margin: 0 auto;
+    padding: 0.1rem 0;
+  }
+}
+
 /* Horizontal timeline */
 .htl-scroll {
   overflow-x: auto;
