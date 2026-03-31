@@ -1404,9 +1404,10 @@ textarea {
 
 .project-card-img {
   width: 100%;
-  height: auto;
   display: block;
+  max-height: 480px;
   object-fit: contain;
+  background: var(--off-white);
 }
 
 .project-card-video {
