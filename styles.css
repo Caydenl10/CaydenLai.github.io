@@ -949,12 +949,31 @@ small { font-size: 0.85rem; color: var(--gray-400); }
   align-items: start;
 }
 
+.story-img-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: calc(var(--header-h) + 2rem);
+}
+
 .story-img {
   width: 100%;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  position: sticky;
-  top: calc(var(--header-h) + 2rem);
+  display: block;
+}
+
+.story-img--headshot {
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.story-img--campus {
+  height: 200px;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 /* ============================================================
@@ -1629,10 +1648,18 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .story-img {
+  .story-img-col {
+    position: static;
     max-width: 320px;
     margin: 0 auto;
-    position: static;
+  }
+
+  .story-img--headshot {
+    height: 220px;
+  }
+
+  .story-img--campus {
+    height: 150px;
   }
 
   /* Timeline */
