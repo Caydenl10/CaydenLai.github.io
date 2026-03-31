@@ -786,40 +786,95 @@ small { font-size: 0.85rem; color: var(--gray-400); }
 /* ============================================================
    14. TIMELINE
    ============================================================ */
-.timeline-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem 3rem;
-  margin-top: 2rem;
+/* Horizontal timeline */
+.htl-scroll {
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
-.timeline-block h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
+.htl {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  min-width: max-content;
+  padding: 0 1rem 1rem;
+  gap: 0;
 }
 
-.timeline-block p {
-  font-size: 0.9rem;
-  color: var(--gray-700);
-  line-height: 1.75;
-  margin: 0;
+/* connecting line */
+.htl::before {
+  content: '';
+  position: absolute;
+  top: 2.6rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background: var(--gray-100);
+  z-index: 0;
 }
 
-.timeline-steps {
-  list-style: disc;
-  padding-left: 1.2rem;
-  margin: 0;
+.htl-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  width: 170px;
+  flex-shrink: 0;
+  position: relative;
 }
 
-.timeline-steps li {
-  font-size: 0.9rem;
+.htl-item--future .htl-date,
+.htl-item--future .htl-card {
+  opacity: 0.55;
+}
+
+.htl-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.htl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  border: 3px solid var(--gray-300);
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.htl-dot--active {
+  background: var(--gold);
+  border-color: var(--gold-dark);
+}
+
+.htl-card {
+  margin-top: 0.75rem;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 0.85rem 0.9rem;
+  width: 100%;
+  text-align: left;
+}
+
+.htl-card h4 {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.htl-card p {
+  font-size: 0.775rem;
   color: var(--gray-700);
-  line-height: 1.6;
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* — keep old classes below so nothing else breaks — */
@@ -1701,8 +1756,8 @@ textarea {
   }
 
   /* Timeline */
-  .timeline-grid {
-    grid-template-columns: 1fr;
+  .htl-item {
+    width: 140px;
   }
 
   .timeline::before {
