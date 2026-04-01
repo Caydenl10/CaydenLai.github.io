@@ -1128,22 +1128,31 @@ small { font-size: 0.85rem; color: var(--gray-400); }
   display: block;
 }
 
-.story-img--headshot,
+.story-photo-wrap {
+  height: 220px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.story-img--headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: scale(2.2);
+  transform-origin: center 30%;
+  display: block;
+}
+
 .story-img--campus {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: var(--radius-md);
-}
-
-.story-img--headshot {
-  object-position: center 20%;
-  transform: scale(1.25);
-  transform-origin: center 20%;
-}
-
-.story-img--campus {
   object-position: center 40%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: block;
 }
 
 /* ============================================================
@@ -1823,7 +1832,7 @@ textarea {
     margin: 0 auto;
   }
 
-  .story-img--headshot,
+  .story-photo-wrap,
   .story-img--campus {
     height: 180px;
   }
