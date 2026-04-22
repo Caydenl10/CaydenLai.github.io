@@ -1632,40 +1632,49 @@ textarea {
   font-size: clamp(1.4rem, 2.5vw, 2rem);
 }
 
-/* ── Expand / collapse button ── */
-.project-expand-btn {
+/* ── Clickable project card (links to detail page) ── */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card--clickable {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.project-card--clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card-title-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0.5rem 0;
-  cursor: pointer;
-  text-align: left;
-  color: inherit;
   margin-top: 0.25rem;
-  border-radius: var(--radius-sm);
-  transition: opacity 0.15s;
 }
 
-.project-expand-btn:hover {
-  opacity: 0.8;
-}
-
-.project-expand-icon {
+.project-card-arrow {
   flex-shrink: 0;
   color: var(--gold);
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
-.project-expand-btn[aria-expanded="true"] .project-expand-icon {
-  transform: rotate(180deg);
+.project-card--clickable:hover .project-card-arrow {
+  transform: translateX(4px);
 }
 
-.project-expand-content {
-  margin-top: 0.25rem;
+/* ── Discovery detail page layout ── */
+.discovery-detail {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.discovery-footer {
+  margin-top: 2rem;
 }
 
 /* ── YouTube embed ── */
