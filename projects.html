@@ -71,14 +71,23 @@
               <h2 class="project-card-title">Embedded Temperature-Controlled Ventilation System</h2>
 
               <p class="project-desc">
-                I built an Arduino-based cooling system that uses a TMP36 analog temperature sensor to measure ambient temperature in real time and automatically adjusts fan speed using PWM motor control. The system uses a logic-level N-channel MOSFET for safe power switching and a flyback diode for motor protection. I implemented the embedded firmware to read sensor data through the Arduino's ADC, convert the voltage output to a temperature value, and map the measured temperature to a variable PWM duty cycle — creating a closed-loop system that responds dynamically to its environment. This project gave me direct, hands-on experience with the core ECE fundamentals I'm studying at Georgia Tech: analog signal acquisition, digital-to-analog interfacing, and embedded systems programming — and reinforced how hardware and software must be co-designed to build reliable real-world systems.
+                This project is an Arduino-based cooling system that automatically adjusts fan speed in response to real-time temperature changes. A TMP37F analog temperature sensor continuously reads the ambient temperature, and a 2N2222 NPN transistor switches a 5V DC fan using PWM signals from the Arduino Uno. The system features a smoothing algorithm that averages the last ten sensor readings to filter out noise, along with built-in hysteresis logic that prevents the fan from flickering on and off near the activation threshold. As the temperature rises, the fan ramps proportionally from a minimum speed up to full power, creating a responsive and stable closed-loop control system.
+              </p>
+              <p class="project-desc">
+                This project deepened my understanding of analog-to-digital conversion, transistor-based switching circuits, and PWM motor control. It also taught me the importance of signal conditioning and threshold design in building reliable embedded systems.
               </p>
 
-              <div class="project-card-img-wrap">
+              <div class="project-card-img-wrap project-card-img-wrap--duo">
                 <img
-                  src="https://placehold.co/960x480/1a2744/c9a84c?text=Circuit+Diagram+%2F+System+Photo"
-                  alt="Arduino Temperature-Responsive Cooling System — circuit diagram"
-                  class="project-card-img"
+                  src="project.jpg"
+                  alt="Arduino cooling system — full circuit setup"
+                  class="project-card-img project-card-img--half"
+                  loading="lazy"
+                >
+                <img
+                  src="monitor.jpg"
+                  alt="Arduino cooling system — serial monitor output"
+                  class="project-card-img project-card-img--half"
                   loading="lazy"
                 >
               </div>
@@ -90,8 +99,8 @@
                     <span class="tag">Arduino</span>
                     <span class="tag">C/C++</span>
                     <span class="tag">PWM</span>
-                    <span class="tag">TMP36</span>
-                    <span class="tag">MOSFET</span>
+                    <span class="tag">TMP37F</span>
+                    <span class="tag">2N2222</span>
                   </div>
                 </div>
                 <a href="#" class="project-course-link" target="_blank" rel="noopener">

@@ -1639,12 +1639,34 @@ textarea {
   border: 1px solid var(--gray-100);
 }
 
+.project-card-img-wrap--duo {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .project-card-img {
   width: 100%;
   display: block;
   max-height: 480px;
   object-fit: contain;
   background: var(--off-white);
+}
+
+.project-card-img--half {
+  width: 50%;
+  flex: 1 1 0;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .project-card-img-wrap--duo {
+    flex-direction: column;
+  }
+  .project-card-img--half {
+    width: 100%;
+    max-height: 260px;
+  }
 }
 
 .project-card-video {
