@@ -1678,7 +1678,7 @@ textarea {
 }
 
 .discovery-features {
-  margin-top: 2rem;
+  margin-top: 2.75rem;
   background: var(--off-white);
   border-left: 4px solid var(--gold);
   border-radius: var(--radius-sm);
