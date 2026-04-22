@@ -68,46 +68,67 @@
                 <span class="project-date">March 2026</span>
               </div>
 
-              <h2 class="project-card-title">Embedded Temperature-Controlled Ventilation System</h2>
+              <!-- Clickable header row -->
+              <button class="project-expand-btn" aria-expanded="false" aria-controls="discovery-details">
+                <h2 class="project-card-title">Embedded Temperature-Controlled Ventilation System</h2>
+                <span class="project-expand-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </button>
 
-              <p class="project-desc">
-                This project is an Arduino-based cooling system that automatically adjusts fan speed in response to real-time temperature changes. A TMP37F analog temperature sensor continuously reads the ambient temperature, and a 2N2222 NPN transistor switches a 5V DC fan using PWM signals from the Arduino Uno. The system features a smoothing algorithm that averages the last ten sensor readings to filter out noise, along with built-in hysteresis logic that prevents the fan from flickering on and off near the activation threshold. As the temperature rises, the fan ramps proportionally from a minimum speed up to full power, creating a responsive and stable closed-loop control system.
-              </p>
-              <p class="project-desc">
-                This project deepened my understanding of analog-to-digital conversion, transistor-based switching circuits, and PWM motor control. It also taught me the importance of signal conditioning and threshold design in building reliable embedded systems.
-              </p>
+              <!-- Collapsible details -->
+              <div class="project-expand-content" id="discovery-details" hidden>
 
-              <div class="project-card-img-wrap project-card-img-wrap--duo">
-                <img
-                  src="project.jpg"
-                  alt="Arduino cooling system — full circuit setup"
-                  class="project-card-img project-card-img--half"
-                  loading="lazy"
-                >
-                <img
-                  src="monitor2.jpg"
-                  alt="Arduino cooling system — serial monitor output"
-                  class="project-card-img project-card-img--half"
-                  loading="lazy"
-                >
-              </div>
+                <p class="project-desc">
+                  This project is an Arduino-based cooling system that automatically adjusts fan speed in response to real-time temperature changes. A TMP37F analog temperature sensor continuously reads the ambient temperature, and a 2N2222 NPN transistor switches a 5V DC fan using PWM signals from the Arduino Uno. The system features a smoothing algorithm that averages the last ten sensor readings to filter out noise, along with built-in hysteresis logic that prevents the fan from flickering on and off near the activation threshold. As the temperature rises, the fan ramps proportionally from a minimum speed up to full power, creating a responsive and stable closed-loop control system.
+                </p>
+                <p class="project-desc">
+                  This project deepened my understanding of analog-to-digital conversion, transistor-based switching circuits, and PWM motor control. It also taught me the importance of signal conditioning and threshold design in building reliable embedded systems.
+                </p>
 
-              <div class="project-card-footer">
-                <div class="project-built-with">
-                  <span class="project-artifacts-label">Built with</span>
-                  <div class="tags">
-                    <span class="tag">Arduino</span>
-                    <span class="tag">C/C++</span>
-                    <span class="tag">PWM</span>
-                    <span class="tag">TMP37F</span>
-                    <span class="tag">2N2222</span>
-                  </div>
+                <div class="project-card-img-wrap project-card-img-wrap--duo">
+                  <img
+                    src="project.jpg"
+                    alt="Arduino cooling system — full circuit setup"
+                    class="project-card-img project-card-img--half"
+                    loading="lazy"
+                  >
+                  <img
+                    src="monitor2.jpg"
+                    alt="Arduino cooling system — serial monitor output"
+                    class="project-card-img project-card-img--half"
+                    loading="lazy"
+                  >
                 </div>
-                <a href="#" class="project-course-link" target="_blank" rel="noopener">
-                  Individual Discovery Project
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              </div>
+
+                <div class="project-card-video-wrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/OWBhS3R9YaI"
+                    title="Embedded Temperature-Controlled Ventilation System — demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+
+                <div class="project-card-footer">
+                  <div class="project-built-with">
+                    <span class="project-artifacts-label">Built with</span>
+                    <div class="tags">
+                      <span class="tag">Arduino</span>
+                      <span class="tag">C/C++</span>
+                      <span class="tag">PWM</span>
+                      <span class="tag">TMP37F</span>
+                      <span class="tag">2N2222</span>
+                    </div>
+                  </div>
+                  <a href="#" class="project-course-link" target="_blank" rel="noopener">
+                    Individual Discovery Project
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+
+              </div><!-- /project-expand-content -->
 
             </div>
           </article>
@@ -257,5 +278,19 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.project-expand-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', !expanded);
+        if (expanded) {
+          content.hidden = true;
+        } else {
+          content.hidden = false;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
